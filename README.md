@@ -33,11 +33,34 @@ npm run dev
 
 Then open your browser at **`http://localhost:5173/`**.
 
-To test the production build:
+To test the production build locally:
 ```bash
 npm run build
 npm run preview
 ```
+
+---
+
+## 🌐 Deploy to GitHub & Vercel
+
+### Step 1: Push to GitHub
+1. Create a new repository on [GitHub](https://github.com/new) (name it e.g. `campuswatt`).
+2. Run the following commands in this directory:
+```bash
+git remote add origin https://github.com/YOUR_USERNAME/campuswatt.git
+git push -u origin main
+```
+
+### Step 2: Deploy to Vercel (1-Click)
+1. Go to [Vercel Dashboard](https://vercel.com/dashboard) and click **"Add New Project"** -> **"Project"**.
+2. Select your newly pushed `campuswatt` GitHub repository and click **"Import"**.
+3. Vercel automatically detects **Vite**:
+   - **Framework Preset:** Vite
+   - **Build Command:** `vite build`
+   - **Output Directory:** `dist`
+4. Click **"Deploy"**! Your application will be live worldwide with free SSL in under 60 seconds.
+
+*(Note: The included `vercel.json` already configures proper Single Page Application routing rewrites so all paths resolve cleanly without 404 errors).*
 
 ---
 
